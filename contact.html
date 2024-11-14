@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Leonardo Da Vinci Portfolio</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+          <img src="vitruvian-man.png" alt="Vitruvian Man" class="logo-icon" />
+          <span class="brand-name">Leonardo Da Vinci</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="search-icon">
+            <button type="button" id="searchButton">
+              <i class="fas fa-search"></i>
+            </button>
+            <input
+              type="text"
+              class="form-control"
+              id="searchInput"
+              placeholder="Search"
+            />
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="contact-form">
+      <div class="container">
+        <h2>Contact Leonardo Da Vinci</h2>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" required />
+            <div class="tooltip">Please enter your full name.</div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required />
+            <div class="tooltip">Please enter a valid email address.</div>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              required
+            ></textarea>
+            <div class="tooltip">Write your request here.</div>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <div
+            class="alert alert-success mt-3"
+            style="display: none"
+            id="successMessage"
+          >
+            Your message has been sent successfully!
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer text-center">
+      <p>&copy; 2024 Leonardo Da Vinci Portfolio. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#">Twitter</a> | <a href="#">Instagram</a> |
+        <a href="#">LinkedIn</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+// Centering flex items horizontally and vertically
+@mixin flex-center($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Responsive font size based on screen width
+@mixin responsive-font($min-size, $max-size) {
+  font-size: $min-size;
+  @media (min-width: $breakpoint-md) {
+    font-size: $max-size;
+  }
+}
+
+// Smooth transition for properties (with optional duration and timing)
+@mixin transition($property, $duration: 0.3s, $timing: ease-in-out) {
+  transition: $property $duration $timing;
+}
+
+// Full width for elements (for responsive containers like the navbar)
+@mixin full-width {
+  width: 100%;
+}
+
+// Hide an element by default on mobile and show on larger screens
+@mixin hide-on-mobile($breakpoint: $breakpoint-md) {
+  display: none;
+  @media (min-width: $breakpoint) {
+    display: block;
+  }
+}
+
+// Mixin to toggle visibility for search input (show only when button is clicked)
+@mixin search-input($width: 200px) {
+  display: none;
+  width: $width;
+  margin-left: 10px;
+  @include transition('display', 0.3s);
+
+  &.active {
+    display: inline-block;
+  }
+}
+
+// Mixin for custom spacing (margin/padding) for various elements
+@mixin spacing($property, $value) {
+  #{$property}: $value;
+}
+
+// Mixin for a box-shadow effect, used for elevation or focus
+@mixin box-shadow($shadow: 0 4px 6px rgba(0, 0, 0, 0.1)) {
+  box-shadow: $shadow;
+}
+
+// Flex layout with customizable wrap and alignment options
+@mixin flex-layout($direction: row, $wrap: nowrap, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}

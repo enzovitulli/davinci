@@ -1,0 +1,103 @@
+// Navbar styling
+.navbar {
+  background-color: $white;
+  color: $black;
+  padding: $spacing-unit;
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: $black;
+    font-family: $font-primary;
+    font-size: 2rem; // Increase brand name font size
+
+    img {
+      height: 70px;
+      margin-right: 0.5rem;
+    }
+
+    .brand-name {
+      font-size: 2rem; // Make the brand name bigger
+      font-weight: bold; // More serious font weight
+    }
+  }
+
+  // Center-align navbar links
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+
+    .nav-item {
+      padding: 0 1.5rem; // Space between links
+    }
+
+    .nav-link {
+      color: $black;
+      font-family: $font-primary;
+      font-size: 1.2rem;
+      @include transition(color);
+
+      &:hover {
+        color: $highlight;
+      }
+    }
+  }
+
+  .search-icon {
+    button {
+      background: transparent;
+      border: none;
+      color: $black;
+      font-size: 1.5rem;
+      cursor: pointer;
+      @include transition(color);
+    }
+
+    #searchInput {
+      display: none;
+      width: 200px;
+      margin-left: 10px;
+      @include transition(display, 0.3s);
+    }
+
+    // Toggle search input visibility on button click
+    #searchButton:focus + #searchInput,
+    #searchInput:focus {
+      display: inline-block;
+    }
+  }
+}
+
+// Separate section for the actual navbar links (below the header)
+.navbar-links {
+  background-color: $white;
+  padding: $spacing-sm 0;
+  text-align: center;
+
+  .navbar-nav {
+    display: flex;
+    justify-content: space-evenly;  // This spaces out the navbar links evenly
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;  // Centering the nav links
+
+    .nav-item {
+      padding: 0 1.5rem;  // Space out links further if needed
+    }
+
+    .nav-link {
+      color: $black;
+      font-size: 1.2rem;
+      font-family: $font-primary;
+      @include transition(color);
+
+      &:hover {
+        color: $highlight;
+      }
+    }
+  }
+}

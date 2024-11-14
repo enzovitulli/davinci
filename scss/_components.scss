@@ -1,0 +1,70 @@
+// Hero and Jumbotron
+.hero {
+  .jumbotron {
+    background-color: $black;
+    color: $white;
+    padding: 2rem;
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+      @include responsive-font(2.5rem, 3.5rem);
+    }
+  }
+
+  .carousel {
+    .carousel-inner img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Table
+.table {
+  &.table-bordered {
+    border-color: $gray;
+  }
+
+  &.table-striped tbody tr:nth-of-type(odd) {
+    background-color: $gray;
+  }
+}
+
+.btn-primary {
+  background-color: $highlight;
+  border: none;
+
+  &:hover {
+    background-color: darken($highlight, 10%);
+  }
+}
+
+// Gallery
+.gallery-grid {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      @include transition(transform, 0.2s);
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+      border: 2px solid $highlight;
+    }
+  }
+}
+
+// Modals
+.modal {
+  background-color: rgba($black, 0.8);
+}

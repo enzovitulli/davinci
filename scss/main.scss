@@ -1,0 +1,28 @@
+// Import Bootstrap functions and variables first to ensure custom overrides work properly
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Custom Variables and Mixins
+@import 'variables';
+@import 'mixins';
+
+// Import Bootstrap components (only the ones we need for this project)
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/modal";
+@import "../node_modules/bootstrap/scss/alert";
+
+// Custom Base, Layout, Components, and Page-specific styles
+@import 'base';
+@import 'layout';
+@import 'components';
+@import 'pages';

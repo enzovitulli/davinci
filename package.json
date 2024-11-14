@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-da-vinci",
+  "version": "1.0.0",
+  "description": "A website portfolio of Leonardo Da Vinci, fully responsive with Bootstrap and SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enzovitulli/davinci.git"
+  },
+  "author": "enzovitulli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enzovitulli/davinci/issues"
+  },
+  "homepage": "https://github.com/enzovitulli/davinci#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.80.7"
+  }
+}

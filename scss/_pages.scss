@@ -1,0 +1,42 @@
+// Homepage
+.artist-info {
+  text-align: center;
+  padding: $spacing-unit 0;
+
+  h2 {
+    font-family: $font-primary;
+    color: $black;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    color: $gray;
+  }
+}
+
+// Gallery
+.gallery-header {
+  .dropdown {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+// Contact Form
+.contact-form {
+  .form-label {
+    font-family: $font-primary;
+    color: $black;
+  }
+
+  .btn-primary {
+    background-color: $green;
+    border: none;
+  }
+
+  .alert-success {
+    color: $white;
+    background-color: $green;
+    border-color: $green;
+  }
+}

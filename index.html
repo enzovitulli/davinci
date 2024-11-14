@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leonardo Da Vinci Portfolio</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Main Header with Logo and Search (No navbar links here) -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Brand Name (Left-aligned, Larger font) -->
+        <a class="navbar-brand" href="#">
+          <img src="/img/vitruvian-man-white.svg" alt="Vitruvian Man" class="logo-icon" />
+          <span class="brand-name">Leonardo Da Vinci</span>
+        </a>
+
+        <!-- Search Icon (Right-aligned) -->
+        <div class="search-icon ml-auto">
+          <button type="button" id="searchButton" class="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+          <input
+            type="text"
+            class="form-control"
+            id="searchInput"
+            placeholder="Search"
+            style="display: none;"
+          />
+        </div>
+      </nav>
+    </header>
+
+    <!-- Navbar Links (Separate Section Below Header) -->
+    <section class="navbar-links-container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <!-- First Block: Fullscreen Carousel -->
+    <section class="hero">
+      <div class="jumbotron text-center">
+        <h1>Leonardo Da Vinci</h1>
+      </div>
+      <div id="artCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#artCarousel"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#artCarousel"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#artCarousel"
+            data-bs-slide-to="2"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="artwork1.jpg" class="d-block w-100" alt="Artwork 1" />
+          </div>
+          <div class="carousel-item">
+            <img src="artwork2.jpg" class="d-block w-100" alt="Artwork 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="artwork3.jpg" class="d-block w-100" alt="Artwork 3" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Block: About the Artist (Text Left, Image Right) -->
+    <section class="artist-info d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <div class="container text-left col-md-6">
+        <h2>About me</h2>
+        <p class="description">
+          I am Leonardo da Vinci.
+          <br />
+          As a visionary artist and inventor, I specialize in blending creativity with science
+          to deliver exceptional results. With a wealth of experience in painting, sculpture, 
+          and engineering, I approach each project with a meticulous attention to detail and 
+          a passion for innovation. Whether it’s crafting timeless artworks or designing 
+          groundbreaking inventions, my goal is to create work that transcends time and 
+          pushes the limits of what’s possible.
+        </p>
+      </div>
+      <div class="image col-md-6">
+        <img src="leonardo-image.jpg" alt="Leonardo Da Vinci" class="img-fluid" />
+      </div>
+    </section>
+
+    <!-- Third Block: Artwork Table -->
+    <section class="artwork-table">
+      <div class="container">
+        <button class="btn btn-primary btn-lg cta-button">Contact</button>
+        <table class="table table-bordered table-striped mt-4">
+          <thead>
+            <tr>
+              <th>Artwork</th>
+              <th>Year</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mona Lisa</td>
+              <td>1503</td>
+              <td>Painting</td>
+            </tr>
+            <tr>
+              <td>Last Supper</td>
+              <td>1495</td>
+              <td>Painting</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer text-center">
+      <p>&copy; 2024 Leonardo Da Vinci Portfolio. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#">Twitter</a> | <a href="#">Instagram</a> |
+        <a href="#">LinkedIn</a>
+      </div>
+    </footer>
+
+    <!-- Add script to toggle search bar visibility -->
+    <script>
+      const searchButton = document.getElementById('searchButton');
+      const searchInput = document.getElementById('searchInput');
+
+      searchButton.addEventListener('click', function() {
+        if (searchInput.style.display === 'none' || searchInput.style.display === '') {
+          searchInput.style.display = 'inline-block';
+        } else {
+          searchInput.style.display = 'none';
+        }
+      });
+    </script>
+  </body>
+</html>
